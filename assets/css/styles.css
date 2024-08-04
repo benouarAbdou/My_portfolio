@@ -308,14 +308,13 @@ body.dark-theme{
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-
 }
 
 .projects__card img{
   width: 100%;
   height: 100%;
-
 }
+
 .projects__modal{
   position: absolute;
   width: 100%;
@@ -331,7 +330,6 @@ body.dark-theme{
   align-items: flex-end;
   padding: 1.5rem 1.25rem;
   transition: .3s;
-
 }
 
 .projects__subtitle, .projects__title{
@@ -351,9 +349,6 @@ body.dark-theme{
   padding: .5rem;
 }
 
-.projects__card:hover .projects__modal , .projects__card:active .projects__modal {
-  bottom: 0;
-}
 /*=============== SKILLS ===============*/
 
 .skills_content{
@@ -543,5 +538,22 @@ body.dark-theme{
 
   .footer__copy{
     margin: 4.5rem 0 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__card:hover .projects__modal,
+  .projects__card:active .projects__modal {
+    bottom: 0;
+  }
+}
+
+/* Always show project details for smaller screens */
+@media screen and (max-width: 767px) {
+  .projects__modal {
+    bottom: 0;
+    background: linear-gradient(180deg,
+      hsla(var(--hue), 24%, 4%, 0.1) 15%,
+      hsla(var(--hue), 24%, 4%, 0.9) 75%,
+      hsla(var(--hue), 24%, 4%, 1) 100%);
   }
 }
